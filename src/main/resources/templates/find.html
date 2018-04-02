@@ -1,0 +1,29 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reading List</title>
+    <link rel="stylesheet" th:href="@{/styleFind.css}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Find a person</h1>
+<form method="post" action="/pers">
+<label for="name1">Name: </label>
+<input type="text" id="name1" name="name1" placeholder="type name1"/>
+<input type="submit" value="send"/>
+</form>
+<!--<span style="color: #dc4567;">${person}</span>-->
+<!--<form th:action="@{/}" th:object="${person}" method="post">
+<p>name: <input type="text" th:text="${one.name}" /></p>
+<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>-->
+<!--<p th:text="'name: ' + ${onePerson.name}" />-->
+
+
+   <!-- <form method="POST">
+       <input type="text"/>
+        <input type="submit"/>
+
+    </form>-->
+
+</body>
+</html>
