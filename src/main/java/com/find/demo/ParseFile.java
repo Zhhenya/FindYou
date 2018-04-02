@@ -3,6 +3,7 @@ package com.find.demo;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -31,8 +32,13 @@ public class ParseFile {
         return "find";
     }
 
+    @RequestMapping(value="/greeting", method=RequestMethod.POST)
+    public String greetingSubmit(Model model) {
+        model.addAttribute("name1", name);
+        return "result";
+    }
 
- /*   private Person onePerson = new Person();
+    /*   private Person onePerson = new Person();
 
    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getDate(  ModelMap model){
